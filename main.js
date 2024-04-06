@@ -1,5 +1,6 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
+import chalk from "chalk";
 const currency = {
     USD: 1,
     EUR: 0.91,
@@ -7,6 +8,10 @@ const currency = {
     INR: 74.57,
     PKR: 280,
 };
+// Print welcome message
+console.log(chalk.bold.rgb(204, 204, 204)(`\n  \t\t <<<======================================>>>`));
+console.log(chalk.bold.rgb(204, 204, 204)(`<<<=========>>>  ${chalk.bold.hex('#9999FF')('Welcome To \'Code With Malik Hunain\' - Currency Converter App ')}  <<<===========>>>`));
+console.log(chalk.bold.rgb(204, 204, 204)(`\t\t <<<======================================>>>\n`));
 let userAnswer = await inquirer.prompt([
     {
         name: "from",
